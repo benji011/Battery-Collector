@@ -171,8 +171,6 @@ void ABatteryCollectorCharacter::CollectPickUps()
 	{
 		UpdatePower(_collectedPower);
 	}
-
-	UE_LOG(LogClass, Log, TEXT("player power level -- %f"), GetCurrentPower());
 }
 
 
