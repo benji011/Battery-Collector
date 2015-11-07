@@ -3,6 +3,15 @@
 #include "GameFramework/GameMode.h"
 #include "BatteryCollectorGameMode.generated.h"
 
+UENUM(BlueprintType)
+enum class EBatteryPlayState
+{
+	EPlaying,
+	EGameOver,
+	EWon,
+	EUnknown
+};
+
 UCLASS(minimalapi)
 class ABatteryCollectorGameMode : public AGameMode
 {
@@ -10,11 +19,17 @@ class ABatteryCollectorGameMode : public AGameMode
 
 public:
 	ABatteryCollectorGameMode();
-	virtual void Tick(float DeltaTime) override;								//	Update every frame
+	virtual void 	Tick(float DeltaTime) override;										//	Update every frame
 protected:
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Power")
-	float 	_decayRate;															//	Rate at which player loses character
+	float 			_decayRate;															//	Rate at which player loses character
+
+private:
+
+	EBatteryPlayState CurrentState();													//	Current state
+	template<typename T>
+	void 			ReadyToChangeLevel(T _myCharacter);		//	Check if we are ready to change level
 };
 
 

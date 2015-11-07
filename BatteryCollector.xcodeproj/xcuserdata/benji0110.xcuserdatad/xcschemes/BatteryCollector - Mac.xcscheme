@@ -14,7 +14,7 @@
            buildForAnalyzing = "YES">
            <BuildableReference
               BuildableIdentifier = "primary"
-              BlueprintIdentifier = "BEC0E3285CE295E00F7E3D25"
+              BlueprintIdentifier = "0784B75B0604B4463CFDF657"
               BuildableName = ""
               BlueprintName = "BatteryCollector - Mac"
               ReferencedContainer = "container:BatteryCollector.xcodeproj">
@@ -32,7 +32,7 @@
            skipped = "NO">
            <BuildableReference
               BuildableIdentifier = "primary"
-              BlueprintIdentifier = "F1C20B61252450E2276D2A55"
+              BlueprintIdentifier = "79604B84E9CB1530E8F43CCB"
               BuildableName = "UE4CmdLineRun.xctest"
               BlueprintName = "UE4CmdLineRun"
               ReferencedContainer = "container:BatteryCollector.xcodeproj">
@@ -42,7 +42,7 @@
      <MacroExpansion>
         <BuildableReference
            BuildableIdentifier = "primary"
-           BlueprintIdentifier = "BEC0E3285CE295E00F7E3D25"
+           BlueprintIdentifier = "0784B75B0604B4463CFDF657"
            BuildableName = ""
            BlueprintName = "BatteryCollector - Mac"
            ReferencedContainer = "container:BatteryCollector.xcodeproj">
@@ -86,7 +86,7 @@
      <BuildableProductRunnable>
          <BuildableReference
              BuildableIdentifier = "primary"
-	          BlueprintIdentifier = "BEC0E3285CE295E00F7E3D25"
+	          BlueprintIdentifier = "0784B75B0604B4463CFDF657"
              BuildableName = "BatteryCollector.app"
              BlueprintName = "BatteryCollector"
              ReferencedContainer = "container:UE4.xcodeproj">

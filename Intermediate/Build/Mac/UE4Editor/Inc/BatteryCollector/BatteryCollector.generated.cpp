@@ -21,10 +21,26 @@ void EmptyLinkFunctionForGeneratedCodeBatteryCollector() {}
 		FNativeFunctionRegistrar::RegisterFunction(ABatteryCollectorCharacter::StaticClass(),"UpdatePower",(Native)&ABatteryCollectorCharacter::execUpdatePower);
 	}
 	IMPLEMENT_CLASS(ABatteryCollectorCharacter, 3073312179);
+static class UEnum* EBatteryPlayState_StaticEnum()
+{
+	static class UEnum* Singleton = NULL;
+	if (!Singleton)
+	{
+		extern BATTERYCOLLECTOR_API class UEnum* Z_Construct_UEnum_BatteryCollector_EBatteryPlayState();
+		extern BATTERYCOLLECTOR_API class UPackage* Z_Construct_UPackage_BatteryCollector();
+		Singleton = GetStaticEnum(Z_Construct_UEnum_BatteryCollector_EBatteryPlayState, Z_Construct_UPackage_BatteryCollector(), TEXT("EBatteryPlayState"));
+	}
+	return Singleton;
+}
+static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EBatteryPlayState(EBatteryPlayState_StaticEnum, TEXT("/Script/BatteryCollector"));
 	void ABatteryCollectorGameMode::StaticRegisterNativesABatteryCollectorGameMode()
 	{
 	}
 	IMPLEMENT_CLASS(ABatteryCollectorGameMode, 3484541940);
+	void ACharacterHUD::StaticRegisterNativesACharacterHUD()
+	{
+	}
+	IMPLEMENT_CLASS(ACharacterHUD, 878787367);
 	void APickup::WasCollected()
 	{
 		ProcessEvent(FindFunctionChecked(BATTERYCOLLECTOR_WasCollected),NULL);
@@ -54,6 +70,8 @@ FName BATTERYCOLLECTOR_WasCollected = FName(TEXT("WasCollected"));
 	ENGINE_API class UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_AGameMode();
+	ENGINE_API class UClass* Z_Construct_UClass_AHUD();
+	ENGINE_API class UClass* Z_Construct_UClass_UFont_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_AActor();
 	ENGINE_API class UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 	COREUOBJECT_API class UScriptStruct* Z_Construct_UScriptStruct_FVector();
@@ -66,8 +84,11 @@ FName BATTERYCOLLECTOR_WasCollected = FName(TEXT("WasCollected"));
 	BATTERYCOLLECTOR_API class UFunction* Z_Construct_UFunction_ABatteryCollectorCharacter_UpdatePower();
 	BATTERYCOLLECTOR_API class UClass* Z_Construct_UClass_ABatteryCollectorCharacter_NoRegister();
 	BATTERYCOLLECTOR_API class UClass* Z_Construct_UClass_ABatteryCollectorCharacter();
+	BATTERYCOLLECTOR_API class UEnum* Z_Construct_UEnum_BatteryCollector_EBatteryPlayState();
 	BATTERYCOLLECTOR_API class UClass* Z_Construct_UClass_ABatteryCollectorGameMode_NoRegister();
 	BATTERYCOLLECTOR_API class UClass* Z_Construct_UClass_ABatteryCollectorGameMode();
+	BATTERYCOLLECTOR_API class UClass* Z_Construct_UClass_ACharacterHUD_NoRegister();
+	BATTERYCOLLECTOR_API class UClass* Z_Construct_UClass_ACharacterHUD();
 	BATTERYCOLLECTOR_API class UFunction* Z_Construct_UFunction_APickup_IsActive();
 	BATTERYCOLLECTOR_API class UFunction* Z_Construct_UFunction_APickup_SetActive();
 	BATTERYCOLLECTOR_API class UFunction* Z_Construct_UFunction_APickup_WasCollected();
@@ -270,6 +291,28 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 	}
 	static FCompiledInDefer Z_CompiledInDefer_UClass_ABatteryCollectorCharacter(Z_Construct_UClass_ABatteryCollectorCharacter, TEXT("ABatteryCollectorCharacter"));
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ABatteryCollectorCharacter);
+	UEnum* Z_Construct_UEnum_BatteryCollector_EBatteryPlayState()
+	{
+		UPackage* Outer=Z_Construct_UPackage_BatteryCollector();
+		static UEnum* ReturnEnum = NULL;
+		if (!ReturnEnum)
+		{
+			ReturnEnum = new(EC_InternalUseOnlyConstructor, Outer, TEXT("EBatteryPlayState"), RF_Public|RF_Transient|RF_Native) UEnum(FObjectInitializer());
+			TArray<TPair<FName, uint8>> EnumNames;
+			EnumNames.Add(TPairInitializer<FName, uint8>(FName(TEXT("EBatteryPlayState::EPlaying")), 0));
+			EnumNames.Add(TPairInitializer<FName, uint8>(FName(TEXT("EBatteryPlayState::EGameOver")), 1));
+			EnumNames.Add(TPairInitializer<FName, uint8>(FName(TEXT("EBatteryPlayState::EWon")), 2));
+			EnumNames.Add(TPairInitializer<FName, uint8>(FName(TEXT("EBatteryPlayState::EUnknown")), 3));
+			EnumNames.Add(TPairInitializer<FName, uint8>(FName(TEXT("EBatteryPlayState::EBatteryPlayState_MAX")), 4));
+			ReturnEnum->SetEnums(EnumNames, UEnum::ECppForm::EnumClass);
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnEnum->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnEnum, TEXT("BlueprintType"), TEXT("true"));
+			MetaData->SetValue(ReturnEnum, TEXT("ModuleRelativePath"), TEXT("BatteryCollectorGameMode.h"));
+#endif
+		}
+		return ReturnEnum;
+	}
 	UClass* Z_Construct_UClass_ABatteryCollectorGameMode_NoRegister()
 	{
 		return ABatteryCollectorGameMode::StaticClass();
@@ -309,6 +352,44 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 	}
 	static FCompiledInDefer Z_CompiledInDefer_UClass_ABatteryCollectorGameMode(Z_Construct_UClass_ABatteryCollectorGameMode, TEXT("ABatteryCollectorGameMode"));
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ABatteryCollectorGameMode);
+	UClass* Z_Construct_UClass_ACharacterHUD_NoRegister()
+	{
+		return ACharacterHUD::StaticClass();
+	}
+	UClass* Z_Construct_UClass_ACharacterHUD()
+	{
+		static UClass* OuterClass = NULL;
+		if (!OuterClass)
+		{
+			Z_Construct_UClass_AHUD();
+			Z_Construct_UPackage_BatteryCollector();
+			OuterClass = ACharacterHUD::StaticClass();
+			if (!(OuterClass->ClassFlags & CLASS_Constructed))
+			{
+				UObjectForceRegistration(OuterClass);
+				OuterClass->ClassFlags |= 0x2090028C;
+
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+				UProperty* NewProp__HUDFont = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("_HUDFont"), RF_Public|RF_Transient|RF_Native) UObjectProperty(CPP_PROPERTY_BASE(_HUDFont, ACharacterHUD), 0x0000000000000000, Z_Construct_UClass_UFont_NoRegister());
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+				OuterClass->ClassConfigName = FName(TEXT("Game"));
+				OuterClass->StaticLink();
+#if WITH_METADATA
+				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
+				MetaData->SetValue(OuterClass, TEXT("HideCategories"), TEXT("Rendering Actor Input Replication"));
+				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("CharacterHUD.h"));
+				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("CharacterHUD.h"));
+				MetaData->SetValue(OuterClass, TEXT("ShowCategories"), TEXT("Input|MouseInput Input|TouchInput"));
+				MetaData->SetValue(NewProp__HUDFont, TEXT("ModuleRelativePath"), TEXT("CharacterHUD.h"));
+#endif
+			}
+		}
+		check(OuterClass->GetClass());
+		return OuterClass;
+	}
+	static FCompiledInDefer Z_CompiledInDefer_UClass_ACharacterHUD(Z_Construct_UClass_ACharacterHUD, TEXT("ACharacterHUD"));
+	DEFINE_VTABLE_PTR_HELPER_CTOR(ACharacterHUD);
 	UFunction* Z_Construct_UFunction_APickup_IsActive()
 	{
 		struct Pickup_eventIsActive_Parms
@@ -537,8 +618,8 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/BatteryCollector")), false, false));
 			ReturnPackage->PackageFlags |= PKG_CompiledIn | 0x00000000;
 			FGuid Guid;
-			Guid.A = 0xCB4D83B5;
-			Guid.B = 0x42E44D8F;
+			Guid.A = 0x467E87BC;
+			Guid.B = 0xE1ECE7D7;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);

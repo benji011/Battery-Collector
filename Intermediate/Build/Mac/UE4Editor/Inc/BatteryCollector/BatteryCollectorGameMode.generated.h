@@ -13,9 +13,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define BATTERYCOLLECTOR_BatteryCollectorGameMode_generated_h
 
-#define BatteryCollector_Source_BatteryCollector_BatteryCollectorGameMode_h_9_RPC_WRAPPERS
-#define BatteryCollector_Source_BatteryCollector_BatteryCollectorGameMode_h_9_RPC_WRAPPERS_NO_PURE_DECLS
-#define BatteryCollector_Source_BatteryCollector_BatteryCollectorGameMode_h_9_INCLASS_NO_PURE_DECLS \
+#define BatteryCollector_Source_BatteryCollector_BatteryCollectorGameMode_h_18_RPC_WRAPPERS
+#define BatteryCollector_Source_BatteryCollector_BatteryCollectorGameMode_h_18_RPC_WRAPPERS_NO_PURE_DECLS
+#define BatteryCollector_Source_BatteryCollector_BatteryCollectorGameMode_h_18_INCLASS_NO_PURE_DECLS \
 	private: \
 	static void StaticRegisterNativesABatteryCollectorGameMode(); \
 	friend BATTERYCOLLECTOR_API class UClass* Z_Construct_UClass_ABatteryCollectorGameMode(); \
@@ -26,7 +26,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	virtual UObject* _getUObject() const override { return const_cast<ABatteryCollectorGameMode*>(this); }
 
 
-#define BatteryCollector_Source_BatteryCollector_BatteryCollectorGameMode_h_9_INCLASS \
+#define BatteryCollector_Source_BatteryCollector_BatteryCollectorGameMode_h_18_INCLASS \
 	private: \
 	static void StaticRegisterNativesABatteryCollectorGameMode(); \
 	friend BATTERYCOLLECTOR_API class UClass* Z_Construct_UClass_ABatteryCollectorGameMode(); \
@@ -37,7 +37,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	virtual UObject* _getUObject() const override { return const_cast<ABatteryCollectorGameMode*>(this); }
 
 
-#define BatteryCollector_Source_BatteryCollector_BatteryCollectorGameMode_h_9_STANDARD_CONSTRUCTORS \
+#define BatteryCollector_Source_BatteryCollector_BatteryCollectorGameMode_h_18_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	BATTERYCOLLECTOR_API ABatteryCollectorGameMode(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ABatteryCollectorGameMode) \
@@ -49,7 +49,7 @@ private: \
 public:
 
 
-#define BatteryCollector_Source_BatteryCollector_BatteryCollectorGameMode_h_9_ENHANCED_CONSTRUCTORS \
+#define BatteryCollector_Source_BatteryCollector_BatteryCollectorGameMode_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private copy-constructor, should never be used */ \
 	BATTERYCOLLECTOR_API ABatteryCollectorGameMode(const ABatteryCollectorGameMode& InCopy); \
@@ -59,23 +59,23 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ABatteryCollectorGameMode); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ABatteryCollectorGameMode)
 
 
-#define BatteryCollector_Source_BatteryCollector_BatteryCollectorGameMode_h_6_PROLOG
-#define BatteryCollector_Source_BatteryCollector_BatteryCollectorGameMode_h_9_GENERATED_BODY_LEGACY \
+#define BatteryCollector_Source_BatteryCollector_BatteryCollectorGameMode_h_15_PROLOG
+#define BatteryCollector_Source_BatteryCollector_BatteryCollectorGameMode_h_18_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	BatteryCollector_Source_BatteryCollector_BatteryCollectorGameMode_h_9_RPC_WRAPPERS \
-	BatteryCollector_Source_BatteryCollector_BatteryCollectorGameMode_h_9_INCLASS \
-	BatteryCollector_Source_BatteryCollector_BatteryCollectorGameMode_h_9_STANDARD_CONSTRUCTORS \
+	BatteryCollector_Source_BatteryCollector_BatteryCollectorGameMode_h_18_RPC_WRAPPERS \
+	BatteryCollector_Source_BatteryCollector_BatteryCollectorGameMode_h_18_INCLASS \
+	BatteryCollector_Source_BatteryCollector_BatteryCollectorGameMode_h_18_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define BatteryCollector_Source_BatteryCollector_BatteryCollectorGameMode_h_9_GENERATED_BODY \
+#define BatteryCollector_Source_BatteryCollector_BatteryCollectorGameMode_h_18_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	BatteryCollector_Source_BatteryCollector_BatteryCollectorGameMode_h_9_RPC_WRAPPERS_NO_PURE_DECLS \
-	BatteryCollector_Source_BatteryCollector_BatteryCollectorGameMode_h_9_INCLASS_NO_PURE_DECLS \
-	BatteryCollector_Source_BatteryCollector_BatteryCollectorGameMode_h_9_ENHANCED_CONSTRUCTORS \
+	BatteryCollector_Source_BatteryCollector_BatteryCollectorGameMode_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+	BatteryCollector_Source_BatteryCollector_BatteryCollectorGameMode_h_18_INCLASS_NO_PURE_DECLS \
+	BatteryCollector_Source_BatteryCollector_BatteryCollectorGameMode_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -84,4 +84,9 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #define CURRENT_FILE_ID BatteryCollector_Source_BatteryCollector_BatteryCollectorGameMode_h
 
 
+#define FOREACH_ENUM_EBATTERYPLAYSTATE(op) \
+	op(EBatteryPlayState::EPlaying) \
+	op(EBatteryPlayState::EGameOver) \
+	op(EBatteryPlayState::EWon) \
+	op(EBatteryPlayState::EUnknown) 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

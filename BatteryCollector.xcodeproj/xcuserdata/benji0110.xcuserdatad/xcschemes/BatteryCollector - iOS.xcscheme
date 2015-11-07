@@ -14,7 +14,7 @@
            buildForAnalyzing = "YES">
            <BuildableReference
               BuildableIdentifier = "primary"
-              BlueprintIdentifier = "D3FB0CAE923ADB385394D920"
+              BlueprintIdentifier = "9A3618D4B2BCA71E0A7E5BC2"
               BuildableName = "BatteryCollector.app"
               BlueprintName = "BatteryCollector - iOS"
               ReferencedContainer = "container:BatteryCollector.xcodeproj">
@@ -32,7 +32,7 @@
            skipped = "NO">
            <BuildableReference
               BuildableIdentifier = "primary"
-              BlueprintIdentifier = "F1C20B61252450E2276D2A55"
+              BlueprintIdentifier = "79604B84E9CB1530E8F43CCB"
               BuildableName = "UE4CmdLineRun.xctest"
               BlueprintName = "UE4CmdLineRun"
               ReferencedContainer = "container:BatteryCollector.xcodeproj">
@@ -42,7 +42,7 @@
      <MacroExpansion>
         <BuildableReference
            BuildableIdentifier = "primary"
-           BlueprintIdentifier = "D3FB0CAE923ADB385394D920"
+           BlueprintIdentifier = "9A3618D4B2BCA71E0A7E5BC2"
            BuildableName = "BatteryCollector.app"
            BlueprintName = "BatteryCollector - iOS"
            ReferencedContainer = "container:BatteryCollector.xcodeproj">
@@ -61,7 +61,7 @@
      <BuildableProductRunnable>
         <BuildableReference
            BuildableIdentifier = "primary"
-           BlueprintIdentifier = "D3FB0CAE923ADB385394D920"
+           BlueprintIdentifier = "9A3618D4B2BCA71E0A7E5BC2"
            BuildableName = "BatteryCollector.app"
            BlueprintName = "BatteryCollector - iOS"
            ReferencedContainer = "container:BatteryCollector.xcodeproj">
@@ -92,7 +92,7 @@
      <BuildableProductRunnable>
          <BuildableReference
              BuildableIdentifier = "primary"
-	          BlueprintIdentifier = "D3FB0CAE923ADB385394D920"
+	          BlueprintIdentifier = "9A3618D4B2BCA71E0A7E5BC2"
              BuildableName = "BatteryCollector.app"
              BlueprintName = "BatteryCollector"
              ReferencedContainer = "container:UE4.xcodeproj">

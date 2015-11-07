@@ -47,7 +47,7 @@ ABatteryCollectorCharacter::ABatteryCollectorCharacter()
 	// are set in the derived blueprint asset named MyCharacter (to avoid direct content references in C++)
 
 	// Set initial power level for our character
-	_initialPower 		= 2000.f;
+	_initialPower 		= 500.f;
 	_characterPower 	= _initialPower;
 
 	// Set and update speed of the character per pick up
@@ -150,7 +150,7 @@ void ABatteryCollectorCharacter::CollectPickUps()
 	TArray<AActor*>	CollectedActors;
 	CollectionSphere -> GetOverlappingActors(CollectedActors);
 
-	float _collectedPower = 0.f;															// Keep track of collected power
+	float _collectedPower = 0.f;															// 	Keep track of collected power
 	for (int32 iCollected = 0; iCollected < CollectedActors.Num(); ++iCollected)
 	{
 		APickup* const testPickup = Cast<APickup>(CollectedActors[iCollected]);				//	Cast the actor to a pickup

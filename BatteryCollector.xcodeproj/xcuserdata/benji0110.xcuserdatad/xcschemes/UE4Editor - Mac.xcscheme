@@ -14,7 +14,7 @@
            buildForAnalyzing = "YES">
            <BuildableReference
               BuildableIdentifier = "primary"
-              BlueprintIdentifier = "7660BC086B370ADE825247F1"
+              BlueprintIdentifier = "C60C0BD2CAB32D0587D297AB"
               BuildableName = ""
               BlueprintName = "UE4Editor - Mac"
               ReferencedContainer = "container:BatteryCollector.xcodeproj">
@@ -32,7 +32,7 @@
            skipped = "NO">
            <BuildableReference
               BuildableIdentifier = "primary"
-              BlueprintIdentifier = "F1C20B61252450E2276D2A55"
+              BlueprintIdentifier = "79604B84E9CB1530E8F43CCB"
               BuildableName = "UE4CmdLineRun.xctest"
               BlueprintName = "UE4CmdLineRun"
               ReferencedContainer = "container:BatteryCollector.xcodeproj">
@@ -42,7 +42,7 @@
      <MacroExpansion>
         <BuildableReference
            BuildableIdentifier = "primary"
-           BlueprintIdentifier = "7660BC086B370ADE825247F1"
+           BlueprintIdentifier = "C60C0BD2CAB32D0587D297AB"
            BuildableName = ""
            BlueprintName = "UE4Editor - Mac"
            ReferencedContainer = "container:BatteryCollector.xcodeproj">
@@ -76,7 +76,7 @@
      <BuildableProductRunnable>
          <BuildableReference
              BuildableIdentifier = "primary"
-	          BlueprintIdentifier = "7660BC086B370ADE825247F1"
+	          BlueprintIdentifier = "C60C0BD2CAB32D0587D297AB"
              BuildableName = "UE4Editor.app"
              BlueprintName = "UE4Editor"
              ReferencedContainer = "container:UE4.xcodeproj">
