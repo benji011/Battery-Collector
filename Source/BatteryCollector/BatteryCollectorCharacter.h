@@ -40,6 +40,11 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Power")
 	void UpdatePower(float _powerChange);												// Function to update character power @param _powerChange amount to change power
 
+	virtual void Tick(float DeltaSeconds) override; 									//	Update function
+
+	void 		 SetGameOverFlag(bool isGameOver);										//	Set game over flag
+	bool 		 GetGameOverFlag();														//	Get game over flag
+
 protected:
 
 	/** Called for forwards/backward input */
@@ -89,6 +94,7 @@ private:
 
 	UPROPERTY(VisibleAnywhere, Category = "Power")
 	float 	_characterPower;											//	Current power level of our character
+	bool 	_isGameOver;
 
 public:
 	/** Returns CameraBoom subobject **/

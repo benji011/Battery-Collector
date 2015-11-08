@@ -20,12 +20,14 @@ class ABatteryCollectorGameMode : public AGameMode
 public:
 	ABatteryCollectorGameMode();
 	virtual void 	Tick(float DeltaTime) override;										//	Update every frame
+
 protected:
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Power")
 	float 			_decayRate;															//	Rate at which player loses character
 
 private:
+	bool 			_isGameOver;
 
 	EBatteryPlayState CurrentState();													//	Current state
 	template<typename T>

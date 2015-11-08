@@ -17,7 +17,7 @@ ABatteryCollectorGameMode::ABatteryCollectorGameMode()
 		DefaultPawnClass = PlayerPawnBPClass.Class;
 	}
 
-	_decayRate = 0.01f;
+	_decayRate 	= 0.05f;
 }
 
 /**
@@ -55,3 +55,9 @@ void ABatteryCollectorGameMode::ReadyToChangeLevel(T _myCharacter)
 		}
 	}
 }
+
+
+
+
+
+

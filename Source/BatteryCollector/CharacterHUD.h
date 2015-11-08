@@ -1,5 +1,10 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
+/**
+ *
+ *  CharacterHUD.h
+ *  Author: Benjamin Lo
+ *  Date: 2015/11/08
+ *
+ */
 #pragma once
 
 #include "GameFramework/HUD.h"
@@ -21,5 +26,6 @@ class BATTERYCOLLECTOR_API ACharacterHUD : public AHUD
 		virtual void     DrawHUD() override;
  
 	private:
-		void             PlayerHealth();
+		void             PlayerHealth();		//	Get players health to display in the HUD
+		void 			 GameOver();			//	Game Over
 };

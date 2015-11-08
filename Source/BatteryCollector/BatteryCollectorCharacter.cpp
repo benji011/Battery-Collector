@@ -53,6 +53,7 @@ ABatteryCollectorCharacter::ABatteryCollectorCharacter()
 	// Set and update speed of the character per pick up
 	_speedFactor		= 0.75f;
 	_baseSpeed 			= 10.f;
+	_isGameOver 		= false;
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -206,5 +207,36 @@ void ABatteryCollectorCharacter::UpdatePower(float _powerChange)
 }
 
 
+/**
+ *	Update function
+ */
+void ABatteryCollectorCharacter::Tick(float DeltaSeconds)
+{
+	Super::Tick(DeltaSeconds);
+
+	// Check if current power is 0 and if it is then set to game over
+	if (GetCurrentPower() <= 0)
+	{
+		SetGameOverFlag(true);
+	}
+}
+
+
+/**
+ *	Set game over flag
+ */
+void ABatteryCollectorCharacter::SetGameOverFlag(bool isGameOver)
+{
+	this -> _isGameOver = isGameOver;
+}	
+
+
+/**
+ *	Get game over flag
+ */
+bool ABatteryCollectorCharacter::GetGameOverFlag()
+{
+	return _isGameOver;
+}
 
 
